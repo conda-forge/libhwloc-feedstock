@@ -17,14 +17,14 @@ source:
     - disable-failing-test.patch
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
   build:
-    - libxml2
+    - libxml2 2.9.3
   run:
-    - libxml2
+    - libxml2 2.9.3
 
 test:
   commands:
