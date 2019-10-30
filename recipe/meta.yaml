@@ -33,6 +33,7 @@ requirements:
     - m2-make                   # [win]
     - m2-m4                     # [win]
     - python >3                 # [win]
+    - make                      # [unix]
     - automake                  # [unix]
     - libtool                   # [unix]
     - autoconf                  # [unix]
