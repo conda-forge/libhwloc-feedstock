@@ -6,7 +6,7 @@ index 9e0ae64..a025442 100644
  #include <errno.h>
  #include <stdio.h>
  #include <string.h>
-+#ifndef _MSC_VER
++#ifndef HAVE_UNISTD_H
  #include <unistd.h>
 +#endif
  
@@ -20,7 +20,7 @@ index 21fffb6..5123629 100644
  #include <errno.h>
  #include <stdio.h>
  #include <string.h>
-+#ifndef _MSC_VER
++#ifndef HAVE_UNISTD_H
  #include <unistd.h>
 +#endif
  #include <assert.h>
@@ -34,7 +34,7 @@ index 91b6af4..f821f37 100644
  #include <errno.h>
  #include <stdio.h>
  #include <string.h>
-+#ifndef _MSC_VER
++#ifndef HAVE_UNISTD_H
  #include <unistd.h>
 +#else
 +#define pid_t int
@@ -42,3 +42,17 @@ index 91b6af4..f821f37 100644
  
  int main(int argc, char *argv[])
  {
+diff --git a/tests/hwloc/hwloc_get_last_cpu_location.c b/tests/hwloc/hwloc_get_last_cpu_location.c
+index 9fc2cd0d..43c37d80 100644
+--- a/tests/hwloc/hwloc_get_last_cpu_location.c
++++ b/tests/hwloc/hwloc_get_last_cpu_location.c
+@@ -7,7 +7,9 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
++#ifdef HAVE_UNISTD_H
+ #include <unistd.h>
++#endif
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <errno.h>
