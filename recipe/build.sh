@@ -39,7 +39,9 @@ case `uname` in
 esac
 
 make -j${CPU_COUNT}
+if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]]; then
 make check -j${CPU_COUNT}
+fi
 make install
 
 PROJECT=hwloc
