@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x.x') }}
@@ -22,17 +22,7 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - pkg-config                # [unix]
-    - posix                     # [win]
-    - clangdev                  # [win]
-    - llvmdev                   # [win]
-    - lld                       # [win]
-    - m2-perl                   # [win]
-    - m2-automake-wrapper       # [win]
-    - m2-libtool                # [win]
-    - m2-autoconf               # [win]
-    - m2-make                   # [win]
-    - m2-m4                     # [win]
-    - python >3                 # [win]
+    - autotools_clang_conda     # [win]
     - make                      # [unix]
     - automake                  # [unix]
     - libtool                   # [unix]
