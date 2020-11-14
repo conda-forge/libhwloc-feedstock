@@ -10,7 +10,7 @@ chmod +x configure
 case "$target_platform" in
     osx-*)
         autoreconf -ivf
-        ./configure --prefix=$PREFIX $DISABLES
+        ./configure --prefix=$PREFIX $DISABLES || (cat config.log; false)
         ;;
     linux-*)
         autoreconf -ivf
@@ -22,9 +22,9 @@ case "$target_platform" in
         # Skip failing tests that are skipped on Linux x86_64 and OSX, but not skipped on windows
         sed -i "s|SUBDIRS += x86||g" tests/hwloc/Makefile.am
         sed -i "s|-Xlinker --output-def -Xlinker .libs/libhwloc.def||g" hwloc/Makefile.am
-        autoreconf -i
+        autoreconf -ivf
         chmod +x configure
-        ./configure --prefix="$PREFIX" --libdir="$PREFIX/lib" $DISABLES
+        ./configure --prefix="$PREFIX" --libdir="$PREFIX/lib" $DISABLES || (cat config.log; false)
         patch_libtool
         make V=1
         ;;
