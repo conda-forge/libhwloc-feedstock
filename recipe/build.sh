@@ -7,15 +7,17 @@ DISABLES="$DISABLES --disable-gl --disable-libudev"
 
 chmod +x configure
 
-case `uname` in
-    Darwin)
+case "$target_platform" in
+    osx-*)
+        autoreconf -ivf
         ./configure --prefix=$PREFIX $DISABLES
         ;;
-    Linux)
+    linux-*)
+        autoreconf -ivf
         export LDFLAGS="${LDFLAGS} -Wl,--as-needed"
         ./configure --prefix=$PREFIX $DISABLES
         ;;
-    MINGW*)
+    win-*)
         export PATH="$PREFIX/Library/bin:$BUILD_PREFIX/Library/bin:$RECIPE_DIR:$PATH"
         export CC="$RECIPE_DIR/cl_wrapper.sh"
         echo "$PATH"
@@ -45,7 +47,7 @@ fi
 make install
 
 PROJECT=hwloc
-if [[ `uname` == MINGW* ]]; then
+if [[ "$target_platform" == win-* ]]; then
     LIBRARY_LIB=$PREFIX/Library/lib
     mv "${LIBRARY_LIB}/${PROJECT}.dll.lib" "${LIBRARY_LIB}/${PROJECT}.lib"
 fi
