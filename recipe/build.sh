@@ -19,7 +19,7 @@ case "$target_platform" in
         ;;
     win-*)
         export LDFLAGS="$LDFLAGS $PREFIX/lib/pthreads.lib"
-        export CPPFLAGS="$CPPFLAGS -Dputenv=_putenv"
+        export CPPFLAGS="$CPPFLAGS -Dputenv=_putenv -Dmktemp=_mktemp -Dopen=_open -Dunlink=_unlink"
         export HWLOC_LDFLAGS="-no-undefined"
         # Skip failing tests that are skipped on Linux x86_64 and OSX, but not skipped on windows
         sed -i "s|SUBDIRS += x86||g" tests/hwloc/Makefile.am
@@ -34,6 +34,6 @@ esac
 
 make -j${CPU_COUNT} V=1
 if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]]; then
-  make check -j${CPU_COUNT} V=1
+  make check -j${CPU_COUNT} V=1 -k
 fi
 make install V=1
