@@ -25,14 +25,14 @@ case "$target_platform" in
         sed -i "s|-Xlinker --output-def -Xlinker .libs/libhwloc.def||g" hwloc/Makefile.am
         autoreconf -ivf
         chmod +x configure
-        ./configure --prefix="$PREFIX" --libdir="$PREFIX/lib" $DISABLES || (cat config.log; false)
+        ./configure --prefix="$PREFIX" --libdir="$PREFIX/lib" $DISABLES --disable-static || (cat config.log; false)
         patch_libtool
         make V=1
         ;;
 esac
 
-make -j${CPU_COUNT}
+make -j${CPU_COUNT} V=1
 if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]]; then
-  make check -j${CPU_COUNT}
+  make check -j${CPU_COUNT} V=1
 fi
 make install V=1
