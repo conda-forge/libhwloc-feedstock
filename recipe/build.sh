@@ -7,43 +7,33 @@ DISABLES="$DISABLES --disable-gl --disable-libudev"
 
 chmod +x configure
 
-case `uname` in
-    Darwin)
-        ./configure --prefix=$PREFIX $DISABLES
+case "$target_platform" in
+    osx-*)
+        autoreconf -ivf
+        ./configure --prefix=$PREFIX $DISABLES || (cat config.log; false)
         ;;
-    Linux)
+    linux-*)
+        autoreconf -ivf
         export LDFLAGS="${LDFLAGS} -Wl,--as-needed"
         ./configure --prefix=$PREFIX $DISABLES
         ;;
-    MINGW*)
-        export PATH="$PREFIX/Library/bin:$BUILD_PREFIX/Library/bin:$RECIPE_DIR:$PATH"
-        export CC="$RECIPE_DIR/cl_wrapper.sh"
-        echo "$PATH"
-        $CC --version
-        export RANLIB=llvm-ranlib
-        export AS=llvm-as
-        export AR=llvm-ar
-        export LD=link
-        export CFLAGS="-MD -I$PREFIX/Library/include -O2"
-        export CXXFLAGS="-MD -I$PREFIX/Library/include -O2"
-        export LDFLAGS="$LDFLAGS -L$PREFIX/Library/lib -no-undefined $PREFIX/Library/lib/pthreads.lib"
+    win-*)
+        export LDFLAGS="$LDFLAGS $PREFIX/lib/pthreads.lib"
+        export CPPFLAGS="$CPPFLAGS -Dputenv=_putenv -Dmktemp=_mktemp -Dopen=_open -Dunlink=_unlink -Dclose=_close -Dstrdup=_strdup"
+        export HWLOC_LDFLAGS="-no-undefined"
         # Skip failing tests that are skipped on Linux x86_64 and OSX, but not skipped on windows
         sed -i "s|SUBDIRS += x86||g" tests/hwloc/Makefile.am
         sed -i "s|-Xlinker --output-def -Xlinker .libs/libhwloc.def||g" hwloc/Makefile.am
-        autoreconf -i
+        autoreconf -ivf
         chmod +x configure
-        chmod +x "$CC"
-        ./configure --prefix="$PREFIX/Library" --libdir="$PREFIX/Library/lib" $DISABLES
+        ./configure --prefix="$PREFIX" --libdir="$PREFIX/lib" $DISABLES --disable-static || (cat config.log; false)
+        patch_libtool
         make V=1
         ;;
 esac
 
-make -j${CPU_COUNT}
-make check -j${CPU_COUNT}
-make install
-
-PROJECT=hwloc
-if [[ `uname` == MINGW* ]]; then
-    LIBRARY_LIB=$PREFIX/Library/lib
-    mv "${LIBRARY_LIB}/${PROJECT}.dll.lib" "${LIBRARY_LIB}/${PROJECT}.lib"
+make -j${CPU_COUNT} V=1
+if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]]; then
+  make check -j${CPU_COUNT} V=1 -k
 fi
+make install V=1
