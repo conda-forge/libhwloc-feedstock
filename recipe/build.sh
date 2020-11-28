@@ -19,6 +19,7 @@ case "$target_platform" in
         ;;
     win-*)
         export LDFLAGS="$LDFLAGS $PREFIX/lib/pthreads.lib"
+        export CPPFLAGS="$CPPFLAGS -Dputenv=_putenv"
         export HWLOC_LDFLAGS="-no-undefined"
         # Skip failing tests that are skipped on Linux x86_64 and OSX, but not skipped on windows
         sed -i "s|SUBDIRS += x86||g" tests/hwloc/Makefile.am
