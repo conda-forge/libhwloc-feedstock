@@ -1,7 +1,7 @@
 {% set name = "libhwloc" %}
 {% set pname = "hwloc" %}
-{% set version = "2.3.0" %}
-{% set sha256 = "155480620c98b43ddf9ca66a6c318b363ca24acb5ff0683af9d25d9324f59836" %}
+{% set version = "2.4.0" %}
+{% set sha256 = "30404065dc1d6872b0181269d0bb2424fbbc6e3b0a80491aa373109554006544" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x.x') }}
