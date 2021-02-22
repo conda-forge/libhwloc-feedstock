@@ -1,7 +1,7 @@
 {% set name = "libhwloc" %}
 {% set pname = "hwloc" %}
-{% set version = "2.4.0" %}
-{% set sha256 = "30404065dc1d6872b0181269d0bb2424fbbc6e3b0a80491aa373109554006544" %}
+{% set version = "2.4.1" %}
+{% set sha256 = "4267fe1193a8989f3ab7563a7499e047e77e33fed8f4dec16822a7aebcf78459" %}
 
 package:
   name: {{ name|lower }}

@@ -3,7 +3,7 @@ About libhwloc
 
 Home: https://www.open-mpi.org/projects/hwloc/
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/libhwloc-feedstock/blob/master/LICENSE.txt)
 
