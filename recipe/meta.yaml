@@ -36,7 +36,7 @@ requirements:
 test:
   commands:
     - hwloc-ls
-    - test -f ${PREFIX}/lib/libhwloc.so            # [unix]
+    - test -f ${PREFIX}/lib/libhwloc${SHLIB_EXT}   # [unix]
     - if not exist %LIBRARY_LIB%\hwloc.lib exit 1  # [win]
 
 about:
