@@ -33,7 +33,7 @@ case "$target_platform" in
 esac
 
 make -j${CPU_COUNT} V=1
-if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]]; then
+if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
   make check -j${CPU_COUNT} V=1 -k
 fi
 make install V=1
