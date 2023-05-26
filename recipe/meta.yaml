@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 
   skip: true  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x.x') }}
@@ -20,6 +20,7 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - {{ compiler('cuda') }}    # [cuda_compiler_version != "None"]
     - pkg-config                # [unix]
     - autotools_clang_conda     # [win]
     - make                      # [unix]
@@ -32,6 +33,7 @@ requirements:
   run:
     - libxml2
     - pthreads-win32            # [win]
+    - __cuda                    # [cuda_compiler_version != "None"]
 
 test:
   commands:
