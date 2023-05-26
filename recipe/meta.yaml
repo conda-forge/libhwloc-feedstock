@@ -19,7 +19,7 @@ build:
 
 requirements:
   build:
-    - {{ compiler('cxx') }}
+    - {{ compiler('cxx') }}     # [cuda_compiler_version == "None"]
     - {{ compiler('cuda') }}    # [cuda_compiler_version != "None"]
     - pkg-config                # [unix]
     - autotools_clang_conda     # [win]
