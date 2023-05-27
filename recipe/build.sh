@@ -15,7 +15,11 @@ case "$target_platform" in
     linux-*)
         autoreconf -ivf
         export LDFLAGS="${LDFLAGS} -Wl,--as-needed"
-        ./configure --prefix=$PREFIX $DISABLES
+        if [[ ${cuda_compiler_version} != "None" ]]; then
+          ./configure --enable-cuda --prefix=$PREFIX $DISABLES
+        else
+          ./configure --prefix=$PREFIX $DISABLES
+        fi
         ;;
     win-*)
         export LDFLAGS="$LDFLAGS $PREFIX/lib/pthreads.lib"
