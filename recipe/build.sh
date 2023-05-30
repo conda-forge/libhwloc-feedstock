@@ -2,7 +2,7 @@
 
 set -e
 
-DISABLES="--disable-cairo --disable-opencl --disable-cuda --disable-nvml"
+DISABLES="--disable-cairo --disable-opencl --disable-cuda --disable-nvml --disable-rsmi"
 DISABLES="$DISABLES --disable-gl --disable-libudev"
 
 chmod +x configure
