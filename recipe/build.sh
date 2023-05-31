@@ -15,7 +15,11 @@ case "$target_platform" in
     linux-*)
         autoreconf -ivf
         export LDFLAGS="${LDFLAGS} -Wl,--as-needed"
-        ./configure --prefix=$PREFIX $DISABLES
+        if [[ ${cuda_compiler_version} != "None" ]]; then
+          ./configure --enable-cuda --prefix=$PREFIX --disable-cairo --disable-opencl --disable-gl --disable-libudev
+        else
+          ./configure --prefix=$PREFIX $DISABLES
+        fi
         ;;
     win-*)
         export LDFLAGS="$LDFLAGS $PREFIX/lib/pthreads.lib"
@@ -33,7 +37,7 @@ case "$target_platform" in
 esac
 
 make -j${CPU_COUNT} V=1
-if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]]; then
+if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]] && [[ ${cuda_compiler_version} == "None" ]]; then
   make check -j${CPU_COUNT} V=1 -k
 fi
 make install V=1

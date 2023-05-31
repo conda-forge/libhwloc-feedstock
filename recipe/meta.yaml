@@ -12,14 +12,16 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
+  skip: true  # [cuda_compiler_version != "None" and win]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x.x') }}
 
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - {{ compiler('cuda') }}    # [cuda_compiler_version != "None"]
     - pkg-config                # [unix]
     - autotools_clang_conda     # [win]
     - make                      # [unix]
@@ -32,10 +34,11 @@ requirements:
   run:
     - libxml2
     - pthreads-win32            # [win]
+    - __cuda                    # [cuda_compiler_version != "None"]
 
 test:
   commands:
-    - hwloc-ls
+    - hwloc-ls                                     # [cuda_compiler_version == "None"]
     - test -f ${PREFIX}/lib/libhwloc${SHLIB_EXT}   # [unix]
     - if not exist %LIBRARY_LIB%\hwloc.lib exit 1  # [win]
 
