@@ -16,7 +16,7 @@ case "$target_platform" in
         autoreconf -ivf
         export LDFLAGS="${LDFLAGS} -Wl,--as-needed"
         if [[ ${cuda_compiler_version} != "None" ]]; then
-          ./configure --enable-cuda --enable-nvml --prefix=$PREFIX --disable-cairo --disable-opencl --disable-gl --disable-libudev
+          ./configure --prefix=$PREFIX $DISABLES --enable-cuda --enable-nvml
         else
           ./configure --prefix=$PREFIX $DISABLES
         fi
