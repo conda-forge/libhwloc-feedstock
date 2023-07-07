@@ -18,7 +18,7 @@ case "$target_platform" in
         if [[ ${cuda_compiler_version} != "None" ]]; then
           ./configure --enable-cuda --prefix=$PREFIX --disable-cairo --disable-opencl --disable-gl --disable-libudev
         else
-          ./configure --prefix=$PREFIX $DISABLES
+          ./configure --prefix=$PREFIX --enable-rsmi $DISABLES
         fi
         ;;
     win-*)
