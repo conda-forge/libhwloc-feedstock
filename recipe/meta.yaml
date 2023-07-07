@@ -41,12 +41,12 @@ requirements:
   host:
     - libxml2
     - pthreads-win32            # [win]
-    - rocm-smi                  # [linux]
+    - rocm-smi                  # [linux and cuda_compiler_version == "None" and build_platform == target_platform]
   run:
     - libxml2
     - pthreads-win32            # [win]
     - __cuda                    # [cuda_compiler_version != "None"]
-    - rocm-smi                  # [linux]
+    - rocm-smi                  # [linux and cuda_compiler_version == "None" and build_platform == target_platform]
 
 test:
   commands:
