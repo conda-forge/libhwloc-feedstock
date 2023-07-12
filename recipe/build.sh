@@ -6,6 +6,7 @@ DISABLES="--disable-cairo --disable-opencl --disable-cuda --disable-nvml"
 DISABLES="$DISABLES --disable-gl --disable-libudev"
 
 chmod +x configure
+env
 echo "target_platform: $target_platform"
 
 case "$target_platform" in
