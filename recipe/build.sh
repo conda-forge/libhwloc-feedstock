@@ -7,7 +7,7 @@ DISABLES="$DISABLES --disable-gl --disable-libudev"
 
 chmod +x configure
 
-case "$target_platform" in
+case "${target_platform:-${TARGET_PLATFORM}}" in
     osx-*)
         autoreconf -ivf
         ./configure --prefix=$PREFIX $DISABLES || (cat config.log; false)
