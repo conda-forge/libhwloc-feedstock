@@ -7,7 +7,7 @@ DISABLES="$DISABLES --disable-gl --disable-libudev"
 
 chmod +x configure
 
-case "$target_platform" in
+case "${target_platform:-${TARGET_PLATFORM}}" in
     osx-*)
         autoreconf -ivf
         ./configure --prefix=$PREFIX $DISABLES || (cat config.log; false)
@@ -17,6 +17,8 @@ case "$target_platform" in
         export LDFLAGS="${LDFLAGS} -Wl,--as-needed"
         if [[ ${cuda_compiler_version} != "None" ]]; then
           ./configure --enable-cuda --prefix=$PREFIX --disable-cairo --disable-opencl --disable-gl --disable-libudev
+        elif [[ ${build_platform} == ${target_platform} ]]; then
+          ./configure --prefix=$PREFIX --enable-rsmi $DISABLES
         else
           ./configure --prefix=$PREFIX $DISABLES
         fi

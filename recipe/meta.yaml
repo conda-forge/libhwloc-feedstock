@@ -2,7 +2,7 @@
 {% set pname = "hwloc" %}
 {% set version = "2.9.2" %}
 {% set sha256 = "ffb554d5735e0e0a19d1fd4b2b86e771d3b58b2d97f257eedacae67ade5054b3" %}
-{% set build_num = 7 %}
+{% set build_num = 8 %}
 
 {% if cuda_compiler_version == "None" %}
 {% set build_num = build_num + 1000 %}
@@ -41,10 +41,12 @@ requirements:
   host:
     - libxml2
     - pthreads-win32            # [win]
+    - rocm-smi                  # [linux and cuda_compiler_version == "None" and build_platform == target_platform]
   run:
     - libxml2
     - pthreads-win32            # [win]
     - __cuda                    # [cuda_compiler_version != "None"]
+    - rocm-smi                  # [linux and cuda_compiler_version == "None" and build_platform == target_platform]
 
 test:
   commands:
