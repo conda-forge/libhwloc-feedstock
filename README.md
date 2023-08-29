@@ -160,13 +160,6 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_ROCM_COMPILATIONenabled</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=546&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_ROCM_COMPILATIONenabled" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>osx_arm64_ROCM_COMPILATIONdisabled</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=546&branchName=main">
@@ -174,24 +167,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_ROCM_COMPILATIONenabled</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=546&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_ROCM_COMPILATIONenabled" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>win_64_ROCM_COMPILATIONdisabledcuda_compilerNonecuda_compiler_versionNone</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=546&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=win&configuration=win%20win_64_ROCM_COMPILATIONdisabledcuda_compilerNonecuda_compiler_versionNone" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_ROCM_COMPILATIONenabledcuda_compilerNonecuda_compiler_versionNone</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=546&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=win&configuration=win%20win_64_ROCM_COMPILATIONenabledcuda_compilerNonecuda_compiler_versionNone" alt="variant">
                 </a>
               </td>
             </tr>
