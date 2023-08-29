@@ -9,6 +9,12 @@ Package license: BSD-3-Clause
 
 Summary: Portable Hardware Locality (hwloc)
 
+This feedstock builds the hwloc library in the `libhwloc` conda package. Different variants of the package are built:
+* `cpu` in the build string: Without CUDA or ROCM support, installed by default. Install specifically this version with `conda install libhwloc=*=*cuda*`.
+* `cuda` in the build string: With CUDA support. Install specifically this version with  `conda install libhwloc=*=*cuda*`
+* `rocm` in the build string: With ROCM support. Install specifically this version with  `conda install libhwloc=*=*rocm*`
+
+
 Current build status
 ====================
 
