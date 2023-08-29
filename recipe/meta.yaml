@@ -24,7 +24,7 @@ build:
   skip: true  # [not linux64 and ROCM_COMPILATION == "enabled"]
   string: cuda{{ cuda_compiler_version | replace('.', '') }}_h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version != "None"]
   string: rocm_h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [ROCM_COMPILATION == "enabled"]
-  string: cpu_h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version == "None" and ROCM_COMPILATION == "disabled"]
+  string: default_h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version == "None" and ROCM_COMPILATION == "disabled"]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x.x') }}
   # weigh down gpu implementation and give nocuda preference
@@ -45,12 +45,12 @@ requirements:
   host:
     - libxml2
     - pthreads-win32            # [win]
-    - rocm-smi                  # [linux and cuda_compiler_version == "None" and build_platform == target_platform and ROCM_COMPILATION == "enabled"]
+    - rocm-smi                  # [linux and cuda_compiler_version == "None" and ROCM_COMPILATION == "enabled"]
   run:
     - libxml2
     - pthreads-win32            # [win]
     - __cuda                    # [cuda_compiler_version != "None"]
-    - rocm-smi                  # [linux and cuda_compiler_version == "None" and build_platform == target_platform and ROCM_COMPILATION == "enabled"]
+    - rocm-smi                  # [linux and cuda_compiler_version == "None" and ROCM_COMPILATION == "enabled"]
 
 test:
   commands:
