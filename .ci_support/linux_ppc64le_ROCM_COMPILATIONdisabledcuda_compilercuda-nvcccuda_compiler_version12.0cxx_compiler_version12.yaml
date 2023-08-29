@@ -1,7 +1,5 @@
-BUILD:
-- aarch64-conda_cos7-linux-gnu
-cdt_arch:
-- aarch64
+ROCM_COMPILATION:
+- disabled
 cdt_name:
 - cos7
 channel_sources:
@@ -21,7 +19,7 @@ docker_image:
 libxml2:
 - '2.11'
 target_platform:
-- linux-aarch64
+- linux-ppc64le
 zip_keys:
 - - cxx_compiler_version
   - cuda_compiler

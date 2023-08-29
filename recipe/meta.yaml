@@ -2,9 +2,9 @@
 {% set pname = "hwloc" %}
 {% set version = "2.9.2" %}
 {% set sha256 = "ffb554d5735e0e0a19d1fd4b2b86e771d3b58b2d97f257eedacae67ade5054b3" %}
-{% set build_num = 8 %}
+{% set build_num = 9 %}
 
-{% if cuda_compiler_version == "None" %}
+{% if cuda_compiler_version == "None" and ROCM_COMPILATION == "disabled" %}
 {% set build_num = build_num + 1000 %}
 {% endif %}
 
@@ -20,13 +20,17 @@ build:
   number: {{ build_num }}
   skip: true  # [win and vc<14]
   skip: true  # [cuda_compiler_version != "None" and win]
+  skip: true  # [cuda_compiler_version != "None" and ROCM_COMPILATION == "enabled"]
+  skip: true  # [not linux64 and ROCM_COMPILATION == "enabled"]
   string: cuda{{ cuda_compiler_version | replace('.', '') }}_h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version != "None"]
-  string: nocuda_h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version == "None"]
+  string: rocm_h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [ROCM_COMPILATION == "enabled"]
+  string: default_h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version == "None" and ROCM_COMPILATION == "disabled"]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x.x') }}
   # weigh down gpu implementation and give nocuda preference
   track_features:
     - cudatoolkit               # [cuda_compiler_version != "None"]
+    - rocm                      # [ROCM_COMPILATION == "enabled"]
 
 requirements:
   build:
@@ -41,12 +45,12 @@ requirements:
   host:
     - libxml2
     - pthreads-win32            # [win]
-    - rocm-smi                  # [linux and cuda_compiler_version == "None" and build_platform == target_platform]
+    - rocm-smi                  # [linux and cuda_compiler_version == "None" and ROCM_COMPILATION == "enabled"]
   run:
     - libxml2
     - pthreads-win32            # [win]
     - __cuda                    # [cuda_compiler_version != "None"]
-    - rocm-smi                  # [linux and cuda_compiler_version == "None" and build_platform == target_platform]
+    - rocm-smi                  # [linux and cuda_compiler_version == "None" and ROCM_COMPILATION == "enabled"]
 
 test:
   commands:
@@ -59,6 +63,12 @@ about:
   license: BSD-3-Clause
   license_file: COPYING
   summary: Portable Hardware Locality (hwloc)
+  description: |
+      This feedstock builds the hwloc library in the `libhwloc` conda package. Different variants of the package are built:
+      * `default` in the build string: Without CUDA or ROCM support, installed by default. Install specifically this version with `conda install libhwloc=*=*default*`.
+      * `cuda` in the build string: With CUDA support. Install specifically this version with  `conda install libhwloc=*=*cuda*`
+      * `rocm` in the build string: With ROCM support. Install specifically this version with  `conda install libhwloc=*=*rocm*`
+
 
 extra:
   recipe-maintainers:
