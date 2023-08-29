@@ -17,7 +17,7 @@ case "${target_platform:-${TARGET_PLATFORM}}" in
         export LDFLAGS="${LDFLAGS} -Wl,--as-needed"
         if [[ ${cuda_compiler_version} != "None" ]]; then
           ./configure --enable-cuda --prefix=$PREFIX --disable-cairo --disable-opencl --disable-gl --disable-libudev
-        elif [[ ${build_platform} == ${target_platform} && ${ROCM_COMPILATION} == "enabled" ]]; then
+        elif [[ ${ROCM_COMPILATION} == "enabled" ]]; then
           ./configure --prefix=$PREFIX --enable-rsmi $DISABLES
         else
           ./configure --prefix=$PREFIX $DISABLES
