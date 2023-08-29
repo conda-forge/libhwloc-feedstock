@@ -44,18 +44,6 @@ jobs:
         CONFIG: linux_aarch64_ROCM_COMPILATIONdisabledcuda_compilernvcccuda_compiler_version11.2cxx_compiler_version10
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cuda:11.2
-      linux_aarch64_ROCM_COMPILATIONenabledcuda_compilerNonecuda_compiler_versionNonecxx_compiler_version12:
-        CONFIG: linux_aarch64_ROCM_COMPILATIONenabledcuda_compilerNonecuda_compiler_versionNonecxx_compiler_version12
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_ROCM_COMPILATIONenabledcuda_compilercuda-nvcccuda_compiler_version12.0cxx_compiler_version12:
-        CONFIG: linux_aarch64_ROCM_COMPILATIONenabledcuda_compilercuda-nvcccuda_compiler_version12.0cxx_compiler_version12
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_ROCM_COMPILATIONenabledcuda_compilernvcccuda_compiler_version11.2cxx_compiler_version10:
-        CONFIG: linux_aarch64_ROCM_COMPILATIONenabledcuda_compilernvcccuda_compiler_version11.2cxx_compiler_version10
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cuda:11.2
       linux_ppc64le_ROCM_COMPILATIONdisabledcuda_compilerNonecuda_compiler_versionNonecxx_compiler_version12:
         CONFIG: linux_ppc64le_ROCM_COMPILATIONdisabledcuda_compilerNonecuda_compiler_versionNonecxx_compiler_version12
         UPLOAD_PACKAGES: 'True'
@@ -66,18 +54,6 @@ jobs:
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_ppc64le_ROCM_COMPILATIONdisabledcuda_compilernvcccuda_compiler_version11.2cxx_compiler_version10:
         CONFIG: linux_ppc64le_ROCM_COMPILATIONdisabledcuda_compilernvcccuda_compiler_version11.2cxx_compiler_version10
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cuda:11.2
-      linux_ppc64le_ROCM_COMPILATIONenabledcuda_compilerNonecuda_compiler_versionNonecxx_compiler_version12:
-        CONFIG: linux_ppc64le_ROCM_COMPILATIONenabledcuda_compilerNonecuda_compiler_versionNonecxx_compiler_version12
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_ppc64le_ROCM_COMPILATIONenabledcuda_compilercuda-nvcccuda_compiler_version12.0cxx_compiler_version12:
-        CONFIG: linux_ppc64le_ROCM_COMPILATIONenabledcuda_compilercuda-nvcccuda_compiler_version12.0cxx_compiler_version12
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_ppc64le_ROCM_COMPILATIONenabledcuda_compilernvcccuda_compiler_version11.2cxx_compiler_version10:
-        CONFIG: linux_ppc64le_ROCM_COMPILATIONenabledcuda_compilernvcccuda_compiler_version11.2cxx_compiler_version10
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cuda:11.2
   timeoutInMinutes: 360
