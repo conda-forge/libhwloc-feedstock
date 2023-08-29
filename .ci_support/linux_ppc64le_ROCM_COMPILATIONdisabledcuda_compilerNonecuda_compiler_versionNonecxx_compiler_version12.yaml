@@ -1,3 +1,5 @@
+ROCM_COMPILATION:
+- disabled
 cdt_name:
 - cos7
 channel_sources:
@@ -5,9 +7,9 @@ channel_sources:
 channel_targets:
 - conda-forge main
 cuda_compiler:
-- cuda-nvcc
+- None
 cuda_compiler_version:
-- '12.0'
+- None
 cxx_compiler:
 - gxx
 cxx_compiler_version:
@@ -17,7 +19,7 @@ docker_image:
 libxml2:
 - '2.11'
 target_platform:
-- linux-64
+- linux-ppc64le
 zip_keys:
 - - cxx_compiler_version
   - cuda_compiler
