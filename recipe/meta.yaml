@@ -21,6 +21,7 @@ build:
   skip: true  # [win and vc<14]
   skip: true  # [cuda_compiler_version != "None" and win]
   skip: true  # [cuda_compiler_version != "None" and ROCM_COMPILATION == "enabled"]
+  skip: true  # [not linux and ROCM_COMPILATION == "enabled"]
   string: cuda{{ cuda_compiler_version | replace('.', '') }}_h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version != "None"]
   string: rocm_h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [ROCM_COMPILATION == "enabled"]
   string: cpu_h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version == "None" and ROCM_COMPILATION == "disabled"]
