@@ -22,6 +22,7 @@ build:
   skip: true  # [cuda_compiler_version != "None" and win]
   skip: true  # [cuda_compiler_version != "None" and ROCM_COMPILATION == "enabled"]
   skip: true  # [not linux and ROCM_COMPILATION == "enabled"]
+  skip: true  # [build_platform != target_platform and ROCM_COMPILATION == "enabled"]
   string: cuda{{ cuda_compiler_version | replace('.', '') }}_h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version != "None"]
   string: rocm_h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [ROCM_COMPILATION == "enabled"]
   string: cpu_h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [cuda_compiler_version == "None" and ROCM_COMPILATION == "disabled"]
@@ -63,6 +64,12 @@ about:
   license: BSD-3-Clause
   license_file: COPYING
   summary: Portable Hardware Locality (hwloc)
+  description: |
+      This feedstock builds the hwloc library in the `libhwloc` conda package. Different variants of the package are built:
+      * `cpu` in the build string: Without CUDA or ROCM support, installed by default. Install specifically this version with `conda install libhwloc=*=*cuda*`.
+      * `cuda` in the build string: With CUDA support. Install specifically this version with  `conda install libhwloc=*=*cuda*`
+      * `rocm` in the build string: With ROCM support. Install specifically this version with  `conda install libhwloc=*=*rocm*`
+
 
 extra:
   recipe-maintainers:
