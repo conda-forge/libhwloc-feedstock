@@ -54,6 +54,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_64_ROCM_COMPILATIONdisabledcuda_compilernvcccuda_compiler_version11.8cxx_compiler_version11</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=546&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_ROCM_COMPILATIONdisabledcuda_compilernvcccuda_compiler_version11.8cxx_compiler_version11" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>linux_64_ROCM_COMPILATIONenabledcuda_compilerNonecuda_compiler_versionNonecxx_compiler_version12</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=546&branchName=main">
@@ -72,6 +79,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=546&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_ROCM_COMPILATIONenabledcuda_compilernvcccuda_compiler_version11.2cxx_compiler_version10" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_ROCM_COMPILATIONenabledcuda_compilernvcccuda_compiler_version11.8cxx_compiler_version11</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=546&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_ROCM_COMPILATIONenabledcuda_compilernvcccuda_compiler_version11.8cxx_compiler_version11" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -96,6 +110,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_aarch64_ROCM_COMPILATIONdisabledcuda_compilernvcccuda_compiler_version11.8cxx_compiler_version11</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=546&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_ROCM_COMPILATIONdisabledcuda_compilernvcccuda_compiler_version11.8cxx_compiler_version11" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>linux_ppc64le_ROCM_COMPILATIONdisabledcuda_compilerNonecuda_compiler_versionNonecxx_compiler_version12</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=546&branchName=main">
@@ -114,6 +135,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=546&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_ROCM_COMPILATIONdisabledcuda_compilernvcccuda_compiler_version11.2cxx_compiler_version10" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_ROCM_COMPILATIONdisabledcuda_compilernvcccuda_compiler_version11.8cxx_compiler_version11</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=546&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_ROCM_COMPILATIONdisabledcuda_compilernvcccuda_compiler_version11.8cxx_compiler_version11" alt="variant">
                 </a>
               </td>
             </tr><tr>
