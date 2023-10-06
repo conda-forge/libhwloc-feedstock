@@ -38,8 +38,6 @@ requirements:
     - {{ compiler('cuda') }}    # [cuda_compiler_version != "None"]
     - pkg-config                # [unix]
     - autotools_clang_conda     # [win]
-    # Workaround for https://github.com/conda-forge/libhwloc-feedstock/pull/69#issuecomment-1739406306
-    - clang 16.*                # [win]
     - make                      # [unix]
     - automake                  # [unix]
     - libtool                   # [unix]
