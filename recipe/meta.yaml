@@ -2,10 +2,10 @@
 {% set pname = "hwloc" %}
 {% set version = "2.9.3" %}
 {% set sha256 = "5985db3a30bbe51234c2cd26ebe4ae9b4c3352ab788b1a464c40c0483bf4de59" %}
-{% set build_num = 9 %}
+{% set build = 10 %}
 
 {% if cuda_compiler_version == "None" and ROCM_COMPILATION == "disabled" %}
-{% set build_num = build_num + 1000 %}
+{% set build = build + 1000 %}
 {% endif %}
 
 package:
@@ -17,7 +17,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: {{ build_num }}
+  number: {{ build }}
   skip: true  # [win and vc<14]
   skip: true  # [cuda_compiler_version != "None" and win]
   skip: true  # [cuda_compiler_version != "None" and ROCM_COMPILATION == "enabled"]
