@@ -1,5 +1,9 @@
 ROCM_COMPILATION:
 - disabled
+c_stdlib:
+- sysroot
+c_stdlib_version:
+- '2.17'
 cdt_name:
 - cos7
 channel_sources:
@@ -7,21 +11,22 @@ channel_sources:
 channel_targets:
 - conda-forge main
 cuda_compiler:
-- nvcc
+- cuda-nvcc
 cuda_compiler_version:
-- '11.8'
+- '12.0'
 cxx_compiler:
 - gxx
 cxx_compiler_version:
-- '11'
+- '12'
 docker_image:
-- quay.io/condaforge/linux-anvil-cuda:11.8
+- quay.io/condaforge/linux-anvil-cos7-x86_64
 libxml2:
 - '2'
 target_platform:
 - linux-64
 zip_keys:
 - - cxx_compiler_version
+  - c_stdlib_version
   - cdt_name
   - cuda_compiler
   - cuda_compiler_version
