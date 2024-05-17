@@ -2,7 +2,7 @@
 {% set pname = "hwloc" %}
 {% set version = "2.10.0" %}
 {% set sha256 = "c7fd8a1404a9719c76aadc642864b9f77aed1dc1fc8882d6af861a9260ba240d" %}
-{% set build = 0 %}
+{% set build = 1 %}
 
 {% if cuda_compiler_version == "None" and ROCM_COMPILATION == "disabled" %}
 {% set build = build + 1000 %}
@@ -35,6 +35,7 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - {{ stdlib('c') }}
     - {{ compiler('cuda') }}    # [cuda_compiler_version != "None"]
     - pkg-config                # [unix]
     - autotools_clang_conda     # [win]
