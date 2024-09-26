@@ -12,6 +12,8 @@ cuda_compiler_version:
 - None
 cxx_compiler:
 - vs2019
+libhwloc:
+- 2.11.1
 libxml2:
 - '2'
 target_platform:

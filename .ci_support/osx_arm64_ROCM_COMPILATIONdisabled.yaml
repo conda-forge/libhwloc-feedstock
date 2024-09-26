@@ -19,7 +19,9 @@ cuda_compiler_version:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '16'
+- '17'
+libhwloc:
+- 2.11.1
 libxml2:
 - '2'
 macos_machine:
