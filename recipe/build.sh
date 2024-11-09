@@ -24,7 +24,7 @@ case "${target_platform:-${TARGET_PLATFORM}}" in
         fi
         ;;
     win-*)
-        export LDFLAGS="$LDFLAGS $PREFIX/lib/pthreads.lib"
+        export LDFLAGS="$LDFLAGS $BUILD_PREFIX/lib/pthreads.lib"
         export CPPFLAGS="$CPPFLAGS -Dputenv=_putenv -Dmktemp=_mktemp -Dopen=_open -Dunlink=_unlink -Dclose=_close -Dstrdup=_strdup"
         export HWLOC_LDFLAGS="-no-undefined"
         # Skip failing tests that are skipped on Linux x86_64 and OSX, but not skipped on windows
