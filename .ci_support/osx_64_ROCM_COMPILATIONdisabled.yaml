@@ -19,7 +19,7 @@ cuda_compiler_version:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '17'
+- '18'
 libhwloc:
 - 2.11.1
 libxml2:
