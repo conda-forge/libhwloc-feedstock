@@ -18,7 +18,6 @@ source:
 
 build:
   number: {{ build }}
-  skip: true  # [win and vc<14]
   skip: true  # [cuda_compiler_version != "None" and win]
   skip: true  # [cuda_compiler_version != "None" and ROCM_COMPILATION == "enabled"]
   skip: true  # [not linux64 and ROCM_COMPILATION == "enabled"]
