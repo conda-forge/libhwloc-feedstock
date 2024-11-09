@@ -1,7 +1,5 @@
 ROCM_COMPILATION:
 - disabled
-c_stdlib:
-- vs
 channel_sources:
 - conda-forge
 channel_targets:
@@ -16,6 +14,8 @@ libhwloc:
 - 2.11.1
 libxml2:
 - '2'
+m2w64_c_stdlib:
+- m2w64-toolchain
 target_platform:
 - win-64
 zip_keys:
