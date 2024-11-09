@@ -2,7 +2,7 @@
 {% set pname = "hwloc" %}
 {% set version = "2.11.2" %}
 {% set sha256 = "866ac8ef07b350a6a2ba0c6826c37d78e8994dcbcd443bdd2b436350de19d540" %}
-{% set build = 0 %}
+{% set build = 1 %}
 
 {% if cuda_compiler_version == "None" and ROCM_COMPILATION == "disabled" %}
 {% set build = build + 1000 %}
@@ -18,7 +18,6 @@ source:
 
 build:
   number: {{ build }}
-  skip: true  # [win and vc<14]
   skip: true  # [cuda_compiler_version != "None" and win]
   skip: true  # [cuda_compiler_version != "None" and ROCM_COMPILATION == "enabled"]
   skip: true  # [not linux64 and ROCM_COMPILATION == "enabled"]
@@ -34,24 +33,21 @@ build:
 
 requirements:
   build:
+    - {{ stdlib('c') }}         # [unix]
+    - {{ stdlib('m2w64_c') }}   # [win]
     - {{ compiler('cxx') }}
-    - {{ stdlib('c') }}
     - {{ compiler('cuda') }}    # [cuda_compiler_version != "None"]
     - pkg-config                # [unix]
     - autotools_clang_conda     # [win]
-    # Workaround for https://github.com/conda-forge/libhwloc-feedstock/pull/69#issuecomment-1739406306
-    - clang 16.*                # [win]
     - make                      # [unix]
     - automake                  # [unix]
     - libtool                   # [unix]
     - autoconf                  # [unix]
   host:
     - libxml2
-    - pthreads-win32            # [win]
     - rocm-smi                  # [linux and cuda_compiler_version == "None" and ROCM_COMPILATION == "enabled"]
   run:
     - libxml2
-    - pthreads-win32            # [win]
     - __cuda                    # [cuda_compiler_version != "None"]
     - rocm-smi                  # [linux and cuda_compiler_version == "None" and ROCM_COMPILATION == "enabled"]
 
