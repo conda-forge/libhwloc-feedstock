@@ -59,6 +59,7 @@ test:
 
 about:
   home: https://www.open-mpi.org/projects/hwloc/
+  dev_url: https://github.com/open-mpi/hwloc
   license: BSD-3-Clause
   license_file: COPYING
   summary: Portable Hardware Locality (hwloc)
