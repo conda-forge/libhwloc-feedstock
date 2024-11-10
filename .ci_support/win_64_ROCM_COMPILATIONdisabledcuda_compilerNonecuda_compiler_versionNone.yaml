@@ -15,7 +15,9 @@ libhwloc:
 libxml2:
 - '2'
 m2w64_c_stdlib:
-- m2w64-toolchain
+- m2w64-sysroot
+m2w64_c_stdlib_version:
+- '12'
 target_platform:
 - win-64
 zip_keys:
