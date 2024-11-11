@@ -1,5 +1,7 @@
 ROCM_COMPILATION:
 - disabled
+c_stdlib:
+- vs
 channel_sources:
 - conda-forge
 channel_targets:
@@ -11,13 +13,9 @@ cuda_compiler_version:
 cxx_compiler:
 - vs2019
 libhwloc:
-- 2.11.1
+- 2.11.2
 libxml2:
 - '2'
-m2w64_c_stdlib:
-- m2w64-sysroot
-m2w64_c_stdlib_version:
-- '12'
 target_platform:
 - win-64
 zip_keys:

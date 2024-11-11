@@ -21,7 +21,7 @@ cxx_compiler:
 cxx_compiler_version:
 - '18'
 libhwloc:
-- 2.11.1
+- 2.11.2
 libxml2:
 - '2'
 macos_machine:
