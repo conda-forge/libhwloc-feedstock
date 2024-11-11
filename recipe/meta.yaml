@@ -36,9 +36,8 @@ build:
 
 requirements:
   build:
-    - {{ stdlib('c') }}         # [unix]
-    - {{ stdlib('m2w64_c') }}   # [win]
     - {{ compiler('cxx') }}
+    - {{ stdlib('c') }}
     - {{ compiler('cuda') }}    # [cuda_compiler_version != "None"]
     - pkg-config                # [unix]
     - autotools_clang_conda     # [win]
