@@ -13,13 +13,11 @@ cuda_compiler_version:
 cxx_compiler:
 - vs2019
 libhwloc:
-- 2.11.1
+- 2.11.2
 libxml2:
 - '2'
 target_platform:
 - win-64
-vc:
-- '14'
 zip_keys:
 - - cuda_compiler
   - cuda_compiler_version
