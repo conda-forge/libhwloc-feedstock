@@ -35,87 +35,59 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_ROCM_COMPILATIONdisabledcuda_compilerNonecuda_compiler_versionNonecxx_compiler_version13</td>
+              <td>linux_64_ROCM_COMPILATIONdisabledcuda_compiler_version12.9</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=546&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_ROCM_COMPILATIONdisabledcuda_compilerNonecuda_compiler_versionNonecxx_compiler_version13" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_ROCM_COMPILATIONdisabledcuda_compiler_version12.9" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_ROCM_COMPILATIONdisabledcuda_compilercuda-nvcccuda_compiler_version12.0cxx_compiler_version12</td>
+              <td>linux_64_ROCM_COMPILATIONdisabledcuda_compiler_versionNone</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=546&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_ROCM_COMPILATIONdisabledcuda_compilercuda-nvcccuda_compiler_version12.0cxx_compiler_version12" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_ROCM_COMPILATIONdisabledcuda_compiler_versionNone" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_ROCM_COMPILATIONdisabledcuda_compilernvcccuda_compiler_version11.8cxx_compiler_version11</td>
+              <td>linux_64_ROCM_COMPILATIONenabledcuda_compiler_version12.9</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=546&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_ROCM_COMPILATIONdisabledcuda_compilernvcccuda_compiler_version11.8cxx_compiler_version11" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_ROCM_COMPILATIONenabledcuda_compiler_version12.9" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_ROCM_COMPILATIONenabledcuda_compilerNonecuda_compiler_versionNonecxx_compiler_version13</td>
+              <td>linux_64_ROCM_COMPILATIONenabledcuda_compiler_versionNone</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=546&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_ROCM_COMPILATIONenabledcuda_compilerNonecuda_compiler_versionNonecxx_compiler_version13" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_ROCM_COMPILATIONenabledcuda_compiler_versionNone" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_ROCM_COMPILATIONenabledcuda_compilercuda-nvcccuda_compiler_version12.0cxx_compiler_version12</td>
+              <td>linux_aarch64_ROCM_COMPILATIONdisabledcuda_compiler_version12.9</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=546&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_ROCM_COMPILATIONenabledcuda_compilercuda-nvcccuda_compiler_version12.0cxx_compiler_version12" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_ROCM_COMPILATIONdisabledcuda_compiler_version12.9" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_ROCM_COMPILATIONenabledcuda_compilernvcccuda_compiler_version11.8cxx_compiler_version11</td>
+              <td>linux_aarch64_ROCM_COMPILATIONdisabledcuda_compiler_versionNone</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=546&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_ROCM_COMPILATIONenabledcuda_compilernvcccuda_compiler_version11.8cxx_compiler_version11" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_ROCM_COMPILATIONdisabledcuda_compiler_versionNone" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_ROCM_COMPILATIONdisabledcuda_compilerNonecuda_compiler_versionNonecxx_compiler_version13</td>
+              <td>linux_ppc64le_ROCM_COMPILATIONdisabledcuda_compiler_version12.4cxx_compiler_version12</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=546&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_ROCM_COMPILATIONdisabledcuda_compilerNonecuda_compiler_versionNonecxx_compiler_version13" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_ROCM_COMPILATIONdisabledcuda_compiler_version12.4cxx_compiler_version12" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_ROCM_COMPILATIONdisabledcuda_compilercuda-nvcccuda_compiler_version12.0cxx_compiler_version12</td>
+              <td>linux_ppc64le_ROCM_COMPILATIONdisabledcuda_compiler_versionNonecxx_compiler_version14</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=546&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_ROCM_COMPILATIONdisabledcuda_compilercuda-nvcccuda_compiler_version12.0cxx_compiler_version12" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_aarch64_ROCM_COMPILATIONdisabledcuda_compilernvcccuda_compiler_version11.8cxx_compiler_version11</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=546&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_ROCM_COMPILATIONdisabledcuda_compilernvcccuda_compiler_version11.8cxx_compiler_version11" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_ppc64le_ROCM_COMPILATIONdisabledcuda_compilerNonecuda_compiler_versionNonecxx_compiler_version13</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=546&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_ROCM_COMPILATIONdisabledcuda_compilerNonecuda_compiler_versionNonecxx_compiler_version13" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_ppc64le_ROCM_COMPILATIONdisabledcuda_compilercuda-nvcccuda_compiler_version12.0cxx_compiler_version12</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=546&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_ROCM_COMPILATIONdisabledcuda_compilercuda-nvcccuda_compiler_version12.0cxx_compiler_version12" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_ppc64le_ROCM_COMPILATIONdisabledcuda_compilernvcccuda_compiler_version11.8cxx_compiler_version11</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=546&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_ROCM_COMPILATIONdisabledcuda_compilernvcccuda_compiler_version11.8cxx_compiler_version11" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_ROCM_COMPILATIONdisabledcuda_compiler_versionNonecxx_compiler_version14" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -133,10 +105,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>win_64_ROCM_COMPILATIONdisabledcuda_compilerNonecuda_compiler_versionNone</td>
+              <td>win_64_ROCM_COMPILATIONdisabledcuda_compiler_versionNone</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=546&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=win&configuration=win%20win_64_ROCM_COMPILATIONdisabledcuda_compilerNonecuda_compiler_versionNone" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libhwloc-feedstock?branchName=main&jobName=win&configuration=win%20win_64_ROCM_COMPILATIONdisabledcuda_compiler_versionNone" alt="variant">
                 </a>
               </td>
             </tr>
