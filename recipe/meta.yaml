@@ -1,8 +1,8 @@
 {% set name = "libhwloc" %}
 {% set pname = "hwloc" %}
-{% set version = "2.11.2" %}
-{% set sha256 = "866ac8ef07b350a6a2ba0c6826c37d78e8994dcbcd443bdd2b436350de19d540" %}
-{% set build = 2 %}
+{% set version = "2.12.1" %}
+{% set sha256 = "ffa02c3a308275a9339fbe92add054fac8e9a00cb8fe8c53340094012cb7c633" %}
+{% set build = 0 %}
 
 {% if cuda_compiler_version == "None" and ROCM_COMPILATION == "disabled" %}
 {% set build = build + 1000 %}
@@ -15,9 +15,6 @@ package:
 source:
   url: https://www.open-mpi.org/software/hwloc/v{{ '.'.join(version.split('.')[:2]) }}/downloads/{{ pname }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    # backport https://github.com/open-mpi/hwloc/pull/632
-    - patches/0001-utils-lstopo-don-t-build-lstopo-win-with-MSVC.patch
 
 build:
   number: {{ build }}
