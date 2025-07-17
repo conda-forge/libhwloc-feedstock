@@ -15,9 +15,6 @@ package:
 source:
   url: https://www.open-mpi.org/software/hwloc/v{{ '.'.join(version.split('.')[:2]) }}/downloads/{{ pname }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    # backport https://github.com/open-mpi/hwloc/pull/632
-    - patches/0001-utils-lstopo-don-t-build-lstopo-win-with-MSVC.patch
 
 build:
   number: {{ build }}
