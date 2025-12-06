@@ -24,7 +24,9 @@ case "${target_platform:-${TARGET_PLATFORM}}" in
         fi
         ;;
     win-*)
+        which clang
         export CPPFLAGS="$CPPFLAGS -Dputenv=_putenv -Dmktemp=_mktemp -Dopen=_open -Dunlink=_unlink -Dclose=_close -Dstrdup=_strdup"
+        export CFLAGS="$CFLAGS -fms-define-stdc"
         export HWLOC_LDFLAGS="-no-undefined"
         # Skip failing tests that are skipped on Linux x86_64 and OSX, but not skipped on windows
         sed -i "s|SUBDIRS += x86||g" tests/hwloc/Makefile.am
