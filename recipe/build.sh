@@ -25,7 +25,7 @@ case "${target_platform:-${TARGET_PLATFORM}}" in
         ;;
     win-*)
         which clang
-        export CPPFLAGS="$CPPFLAGS -Dputenv=_putenv -Dmktemp=_mktemp -Dopen=_open -Dunlink=_unlink -Dclose=_close -Dstrdup=_strdup -DO_RDONLY=_O_RDONLY -Dfstat=_fstat -Dstat=_stat -DS_IFREG=_S_IFREG -DS_IFDIR=_S_IFDIR -DS_IFMT=_S_IFMT"
+        export CPPFLAGS="$CPPFLAGS -Dputenv=_putenv -Dmktemp=_mktemp -Dopen=_open -Dunlink=_unlink -Dclose=_close -Dstrdup=_strdup -DO_RDONLY=_O_RDONLY -Dfstat=_fstat -Dstat=_stat -DS_IFREG=_S_IFREG -DS_IFDIR=_S_IFDIR -DS_IFMT=_S_IFMT -DO_RDWR=_O_RDWR -DO_CREAT=_O_CREAT"
         export CFLAGS="$CFLAGS -fms-define-stdc"
         export HWLOC_LDFLAGS="-no-undefined"
         # Skip failing tests that are skipped on Linux x86_64 and OSX, but not skipped on windows
