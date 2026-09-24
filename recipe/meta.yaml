@@ -1,7 +1,7 @@
 {% set name = "libhwloc" %}
 {% set pname = "hwloc" %}
-{% set version = "2.13.0" %}
-{% set sha256 = "1514a5253f0a5c23bc006d3bdd30a6f6125c9a8dc9b5fa4984913d1fff45315d" %}
+{% set version = "2.14.0" %}
+{% set sha256 = "c4e473493cd5e75898bc72a8cbcd3cc722bfb271c9c8b9b4071fd21567835531" %}
 {% set build = 0 %}
 
 {% if cuda_compiler_version == "None" and ROCM_COMPILATION == "disabled" %}
