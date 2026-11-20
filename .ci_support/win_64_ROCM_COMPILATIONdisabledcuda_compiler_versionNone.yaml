@@ -11,7 +11,9 @@ cuda_compiler:
 cuda_compiler_version:
 - None
 cxx_compiler:
-- vs2022
+- vs
+cxx_compiler_version:
+- '2022'
 libhwloc:
 - 2.13.0
 libxml2_devel:
