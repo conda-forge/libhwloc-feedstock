@@ -1,3 +1,5 @@
+DOCKER_PLATFORM:
+- linux/aarch64
 ROCM_COMPILATION:
 - disabled
 c_stdlib:
